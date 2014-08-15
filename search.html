@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>Bookmarks</title>
+
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap/bootstrap.min.css">
+
+	<style type="text/css">
+		.extension-container {
+			overflow: hidden;
+			padding: 10px;
+			width: 400px;
+		}
+
+		.extension-container .search-query {
+			height: 35px;
+			width: 100%;
+		}
+
+		#results {
+			max-height: 400px;
+			overflow-y: auto;
+		}
+
+		#results a {
+			display: block;
+			overflow: hidden;
+			padding: 4px;
+		}
+
+		#results a.yui3-helper-hidden {
+			display: none;
+		}
+
+		#results a:focus {
+			background-color: #d9edf7;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="extension-container">
+		<form class="form-search" onSubmit="event.preventDefaut();">
+			<legend>Bookmarks</legend>
+
+			<input class="input-large search-query" id="query" placeholder="Search..." type="text" />
+		</form>
+
+		<div id="results"></div>
+	</div>
+
+	<script src="js/config.js" type="text/javascript"></script>
+	<script src="https://yuicombo.appspot.com/combo?3.9.1/build/yui/yui-min.js"></script>
+	<script src="js/search.js" type="text/javascript"></script>
+</body>
+</html>
